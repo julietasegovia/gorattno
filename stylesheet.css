@@ -18,7 +18,7 @@
 }
 
 body{
-    background-color: rgb(129, 210, 95);
+    background-color: rgb(92, 148, 68);
 }
 
 .big-container{
@@ -32,7 +32,7 @@ body{
 
 h1{
     font-family: bigone;
-    color: rgb(129, 210, 95);
+    color: rgb(92, 148, 68);
     text-shadow: 5px 0 #fff, -5px 0 #fff, 0 5px #fff, 0 -5px #fff,
                4px 4px #fff, -4px -4px #fff, 4px -4px #fff, -4px 4px #fff;
     font-size: 100px;
@@ -42,7 +42,7 @@ h1{
 h2{
     font-size: 50px;
     font-family: bigone;
-    color: rgb(108, 183, 76);
+    color: rgb(83, 132, 61);
     text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
              1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 
@@ -120,6 +120,7 @@ h2{
     width: 8%;
     display: flex;
     justify-content: space-between;
+    z-index: 20;
 }
 
 #twt{
@@ -154,7 +155,7 @@ button{
     font-size: 25px;
     font-family: rbold;
     background-color: black;
-    color: rgb(108, 183, 76);
+    color: rgb(92, 148, 68);
     border: 2px solid #fff;
     border-radius: 10px;
     width: 300px;
@@ -199,7 +200,7 @@ button{
 
 .carousel-slide .image-label{
     height: 10%;
-    background: rgb(108, 183, 76);
+    background: rgb(92, 148, 68);
     color: #fff;
     display: flex;
     text-align: center;
