@@ -1,0 +1,143 @@
+@font-face {
+    font-family: bigone;
+    src: url(Kihim-Regular.otf);
+}
+@font-face {
+    font-family: toptext;
+    src: url(MiranoExtendedFreebie-Light.ttf);
+}
+
+@font-face {
+    font-family: regular;
+    src: url(Khand-Regular.otf);
+}
+
+@font-face {
+    font-family: rbold;
+    src: url(Khand-Medium.otf);
+}
+
+body{
+    background-color: rgb(129, 210, 95);
+}
+
+.big-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    font-family: bigone;
+    color: rgb(129, 210, 95);
+    text-shadow: 5px 0 #fff, -5px 0 #fff, 0 5px #fff, 0 -5px #fff,
+               4px 4px #fff, -4px -4px #fff, 4px -4px #fff, -4px 4px #fff;
+    font-size: 100px;
+    text-align: center;
+}
+
+h2{
+    font-size: 50px;
+    font-family: bigone;
+    color: rgb(108, 183, 76);
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+
+}
+
+.conditions{
+    display: flex;
+    justify-content: space-around;
+}
+
+.background{
+    background-image: url(background.gif);
+    background-size: cover;
+    filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+#himself{
+    zoom: 1.5;
+    max-height: 80vh;
+    z-index: 1;
+    width: auto;
+}
+
+.topbar{
+    margin-top: -5px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon{
+    width: 28px;
+    height: 28px;
+}
+
+.icon:hover{
+    transform: scale(1.1);
+    filter: brightness(1.5);
+}
+
+.top-text{
+    width: 92%px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    font-size: 20px;
+    font-family: toptext;
+    margin-left: 40px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.switch{
+    color: black;
+    text-decoration: none;
+}
+
+.switch:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.socials{
+    margin-bottom: 5px;
+    width: 8%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#twt{
+    margin-right: 3px;
+}
+
+.comms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 900px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+footer{
+    font-family: rbold;
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
