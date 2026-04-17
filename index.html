@@ -44,20 +44,87 @@
             <div class="info">
                 <div class="comms">
                     <h1>COMMISSIONS</h1>
+                    <div class="carousel-wrap">
+                        <div class="carousel-track-container">
+                            <div class="carousel-track" id="track">
+                                <div class="carousel-slide">
+                                    <img src="monotone-skecth.jpeg" alt="monotone-skecth">
+                                    <div class="image-label">Monotone Sketch ($10+)</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="headshot.jpeg" alt="headshot">
+                                    <div class="image-label">Headshot ($10+)</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="bustshot.png" alt="bustshot">
+                                    <div class="image-label">Bustshot ($25+)</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="fullbody.png" alt="fullbody">
+                                    <div class="image-label">Fullbody ($30+)</div>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="reference-sheet.jpeg" alt="reference-sheet">
+                                    <div class="image-label">Reference Sheet ($100+)</div>
+                                </div>
+                            </div>
+                            <button class="arrow arrow-left" id="prev">&#8592;</button>
+                            <button class="arrow arrow-right" id="next">&#8594;</button>
+                        </div>
+                        <div class="dots" id="dots"></div>
+                        </div>
                     <div class="conditions">
                         <div class="condition">
                             <h2>★ I will draw</h2>
-                            <p></p>
+                            <p>ocs, fanart, real people, anthro/furry art, mecha, nsfw (talk to me beforehand before requesting this! +25%)</p>
                         </div>
                         <div class="condition">
                             <h2>★ I won't draw</h2>
-                            <p></p>
+                            <p>Hate/bigotry, anything problematic (look at dni list), super detailed backgrounds, anything that would make me uncomfortable</p>
                         </div>
+                    </div>
+                    <div class="bcontainer">
+                        <a href="https://ko-fi.com/gorattno60396/commissions" class="switch">
+                            <button>I WANT A COMMISSION!</button>
+                        </a>
                     </div>
                 </div>
                 <div class="prints"></div>
             </div>
         </div>
         <footer>Remember to credit @gorattno if you use this art anywhere!</footer>
+        <script>
+            const track = document.getElementById("track");
+            const dotsEl = document.getElementById("dots");
+            const slides = document.querySelectorAll(".carousel-slide");
+            const total = slides.length;
+            const visible = 4; // Number of images visible at once
+            let current = 0;
+
+            // Create dots - only need dots for the possible scroll positions
+            const maxIndex = total - visible; 
+            for (let i = 0; i <= maxIndex; i++) {
+                const dot = document.createElement("button");
+                dot.classList.add("dot");
+                if (i === 0) dot.classList.add("active");
+                dot.onclick = () => goTo(i);
+                dotsEl.appendChild(dot);
+            }
+
+            function goTo(n) {
+                // Clamp n between 0 and the max possible scroll index
+                current = Math.max(0, Math.min(n, maxIndex));
+                
+                // Move by 25% increments
+                track.style.transform = `translateX(-${current * 25}%)`;
+                
+                // Update dots
+                const dots = dotsEl.querySelectorAll(".dot");
+                dots.forEach((d, i) => d.classList.toggle("active", i === current));
+            }
+
+            document.getElementById("prev").onclick = () => goTo(current - 1);
+            document.getElementById("next").onclick = () => goTo(current + 1);
+        </script>
     </body>
 </html>
