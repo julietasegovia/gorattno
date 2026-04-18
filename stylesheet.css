@@ -128,8 +128,6 @@ h2{
 }
 
 .comms{
-    margin-right: 50px;
-    margin-top: -150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,6 +135,7 @@ h2{
 }
 
 .info{
+    margin-right: 150px;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -154,9 +153,9 @@ footer{
 button{
     font-size: 25px;
     font-family: rbold;
-    background-color: black;
-    color: rgb(92, 148, 68);
-    border: 2px solid #fff;
+    background-color: rgb(92, 148, 68);
+    color: white;
+    border-color: white;
     border-radius: 10px;
     width: 300px;
     cursor: pointer;
@@ -210,6 +209,12 @@ button{
     font-size: 15px;
     margin-top: -5px;
     border-radius: 0 0 10px 10px;
+    text-decoration: none;
+}
+
+.carousel-slide .image-label:hover{
+    background-color: #fff;
+    color: rgb(92, 148, 68);
 }
 
 .arrow {
@@ -250,4 +255,25 @@ button{
 
 .dot.active {
     background: rgb(108, 183, 76);
+}
+
+.switch-info {
+    margin-left: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch-info-selected, button:hover{
+    background-color: white;
+    color: rgb(92, 148, 68);
+    border: 2px solid #fff;
+}
+
+.hide-info{
+    display: none;
+}
+
+#bprints{
+    margin-top: 35px;
 }
