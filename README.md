@@ -1,1 +1,2 @@
-# gorattno
+###Art Promo Website
+I made this page to promote my friend's (@gorattno) art. In this page ypu can find his socials and shops on the header. In the body you can scroll trhough a carousel to see examples of the commissions he does. You can also switch to the 'prints' page where you can see examples of what he sells in his Imprnt shop, also in the form of a carousel. Both 'I want this' buttons will take you to his Ko-Fi or his Imprnt depending on which page you are.
