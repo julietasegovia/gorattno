@@ -230,6 +230,7 @@ button{
     font-size: 18px;
     z-index: 2;
 }
+
 .arrow:hover { background: #fff; }
 
 .arrow-left { left: 10px; }
@@ -276,4 +277,105 @@ button{
 
 #bprints{
     margin-top: 35px;
+}
+
+@media (max-width: 720px) {
+
+    #himself{
+        display: none;
+    }
+
+    .top-text{
+        font-size: 18px;
+        gap: 50px;
+        margin-left: 0px;
+    }
+
+    .socials{
+        justify-content: end;
+    }
+    
+    .button{
+        width: 20px;
+    }
+    
+    .comms{
+        width: 400px;
+        justify-content: center;
+    }
+
+    h1{
+        font-size: 50px;
+        text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    .carousel-slide{
+        padding: 0 1px;
+    }
+
+    .carousel-slide .image-label{
+        font-size: 13px;
+    }
+
+    .condition{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .carousel-track-container {
+        aspect-ratio: 2/1;
+    }
+
+    button{
+        font-size: 18px;
+        width: 150px;
+    }
+
+    .big-container{
+        height: 1150px;
+    }
+
+    .carousel-wrap{
+        margin: 0.5rem auto;
+        max-height: none;
+        width: 95%;
+    }
+
+    .bcomms button{
+        margin-left: 20px;
+    }
+
+    .carousel-slide .image-label{
+        height: 21%;
+    }
+
+    .carousel-slide img {
+        height: 79%;
+    }
+
+    .carousel-slide{
+        min-width: 33.33%;
+    }
+
+    .switch-info{
+        display: none;
+    }
+
+    .prints.hide-info, .comms.hide-info{
+        display: block !important;
+    }
+
+    .info {
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+    }
 }

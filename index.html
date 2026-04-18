@@ -97,7 +97,7 @@
                             <p class="condtion-content">Hate/bigotry, anything problematic (look at dni list), super detailed backgrounds, anything that would make me uncomfortable</p>
                         </div>
                     </div>
-                    <div class="bcontainer">
+                    <div class="bcontainer" id="">
                         <a href="https://ko-fi.com/gorattno60396/commissions" class="switch">
                             <button>I WANT A COMMISSION!</button>
                         </a>
@@ -200,21 +200,32 @@
                 const nextBtn = carousel.querySelector(".arrow-right");
                 
                 const total = slides.length;
-                const visible = 4;
+                
+                let visible = window.innerWidth <= 720 ? 3 : 4;
                 let current = 0;
-                const maxIndex = Math.max(0, total - visible);
+                
+                function updateCarousel() {
+                    dotsEl.innerHTML = ""; 
+                    visible = window.innerWidth <= 720 ? 3 : 4;
+                    const maxIndex = Math.max(0, total - visible);
+                    
+                    if (current > maxIndex) current = maxIndex;
 
-                for (let i = 0; i <= maxIndex; i++) {
-                    const dot = document.createElement("button");
-                    dot.classList.add("dot");
-                    if (i === 0) dot.classList.add("active");
-                    dot.onclick = () => goTo(i);
-                    dotsEl.appendChild(dot);
+                    for (let i = 0; i <= maxIndex; i++) {
+                        const dot = document.createElement("button");
+                        dot.classList.add("dot");
+                        if (i === current) dot.classList.add("active");
+                        dot.onclick = () => goTo(i);
+                        dotsEl.appendChild(dot);
+                    }
+                    
+                    track.style.transform = `translateX(-${current * (100 / visible)}%)`;
                 }
 
                 function goTo(n) {
+                    const maxIndex = Math.max(0, total - visible);
                     current = Math.max(0, Math.min(n, maxIndex));
-                    track.style.transform = `translateX(-${current * 25}%)`;
+                    track.style.transform = `translateX(-${current * (100 / visible)}%)`;
                     
                     const dots = dotsEl.querySelectorAll(".dot");
                     dots.forEach((d, i) => d.classList.toggle("active", i === current));
@@ -222,6 +233,10 @@
 
                 prevBtn.onclick = () => goTo(current - 1);
                 nextBtn.onclick = () => goTo(current + 1);
+
+                // Initialize and add a listener for window resizing
+                updateCarousel();
+                window.addEventListener('resize', updateCarousel);
             });
 
             const commsBtn = document.getElementById("commss");
